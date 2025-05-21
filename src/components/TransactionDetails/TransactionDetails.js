@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import {
   TransactionDetailsContainer,
   TransactionTable,
   NoDataMessage,
-} from './TransactionDetails.styled';
-import Pagination from '../Pagination/Pagination';
-import { formatDate } from '../../utils/dateUtils';
+} from "./TransactionDetails.styled";
+import Pagination from "../Pagination/Pagination";
+import { formatDate } from "../../utils/dateUtils";
 
 const TRANSACTIONS_PER_PAGE = 5;
 
@@ -70,10 +70,10 @@ const TransactionDetails = ({ transactions }) => {
 TransactionDetails.propTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
-      transactionId: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired,
-      amount: PropTypes.number.isRequired,
-      points: PropTypes.number.isRequired,
+      transactionId: PropTypes.string,
+      date: PropTypes.string,
+      amount: PropTypes.number,
+      points: PropTypes.number,
     })
   ),
 };

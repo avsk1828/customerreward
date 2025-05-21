@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
   MonthlyRewardsContainer,
   MonthlyTable,
   MonthlyRow,
   NoDataMessage,
-} from './MonthlyRewards.styled';
+} from "./MonthlyRewards.styled";
 
 const MonthlyRewards = ({
   monthlyRewards,
@@ -65,23 +65,23 @@ const MonthlyRewards = ({
 MonthlyRewards.propTypes = {
   monthlyRewards: PropTypes.arrayOf(
     PropTypes.shape({
-      year: PropTypes.number.isRequired,
+      year: PropTypes.number,
       months: PropTypes.arrayOf(
         PropTypes.shape({
-          month: PropTypes.number.isRequired,
-          monthName: PropTypes.string.isRequired,
-          year: PropTypes.number.isRequired,
-          totalPoints: PropTypes.number.isRequired,
-          transactions: PropTypes.array.isRequired,
+          month: PropTypes.number,
+          monthName: PropTypes.string,
+          year: PropTypes.number,
+          totalPoints: PropTypes.number,
+          transactions: PropTypes.array,
         })
-      ).isRequired,
+      ),
     })
   ),
   selectedMonthYear: PropTypes.shape({
-    year: PropTypes.number.isRequired,
-    month: PropTypes.number.isRequired,
+    year: PropTypes.number,
+    month: PropTypes.number,
   }),
-  onSelectMonthYear: PropTypes.func.isRequired,
+  onSelectMonthYear: PropTypes.func,
 };
 
 export default MonthlyRewards;

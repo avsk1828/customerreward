@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
   CustomerListContainer,
   CustomerTable,
   CustomerRow,
-} from './CustomerList.styled';
+} from "./CustomerList.styled";
 
 const CustomerList = ({ customers, selectedCustomerId, onSelectCustomer }) => {
   return (
@@ -40,7 +40,7 @@ CustomerList.propTypes = {
       id: PropTypes.string.isRequired,
       totalRewards: PropTypes.number.isRequired,
     })
-  ).isRequired,
+  ),
   selectedCustomerId: PropTypes.string,
   onSelectCustomer: PropTypes.func.isRequired,
 };
